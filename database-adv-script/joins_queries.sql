@@ -9,7 +9,9 @@ SELECT
 FROM 
     bookings b
 INNER JOIN 
-    users u ON b.user_id = u.user_id;
+    users u ON b.user_id = u.user_id
+ORDER BY 
+    b.booking_id ASC;
 
 -- LEFT JOIN: Properties and Reviews
 SELECT 
@@ -22,7 +24,9 @@ SELECT
 FROM 
     properties p
 LEFT JOIN 
-    reviews r ON p.property_id = r.property_id;
+    reviews r ON p.property_id = r.property_id
+ORDER BY 
+    p.property_id ASC;
 
 -- FULL OUTER JOIN: Users and Bookings
 SELECT 
@@ -35,4 +39,6 @@ SELECT
 FROM 
     users u
 FULL OUTER JOIN 
-    bookings b ON u.user_id = b.user_id;
+    bookings b ON u.user_id = b.user_id
+ORDER BY 
+    u.user_id ASC;
